@@ -5,3 +5,7 @@ numpy
 opencv-python
 insightface
 onnxruntime
+gradio
+albumentations
+cloths-segmentation
+iglovikov-helper-functions
