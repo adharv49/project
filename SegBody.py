@@ -54,7 +54,8 @@ def segment_body(original_img, face=True):
     segments = segmenter(model_image1)
 
     # Create list of masks
-    segment_include = ["Hat", "Hair", "Sunglasses", "Upper-clothes", "Skirt", "Pants", "Dress", "Belt", "Left-shoe", "Right-shoe", "Face", "Left-leg", "Right-leg", "Left-arm", "Right-arm", "Bag","Scarf"]
+    #segment_include = ["Hat", "Hair", "Sunglasses", "Upper-clothes", "Skirt", "Pants", "Dress", "Belt", "Left-shoe", "Right-shoe", "Face", "Left-leg", "Right-leg", "Left-arm", "Right-arm", "Bag","Scarf"]
+    segment_include =[ "Upper-clothes"]
     mask_list = []
     for s in segments:
         if(s['label'] in segment_include):
@@ -88,7 +89,8 @@ def segment_torso(original_img):
     segments = segmenter(img)
 
     # Create list of masks
-    segment_include = ["Upper-clothes", "Dress", "Belt", "Face", "Left-arm", "Right-arm"]
+    #segment_include = ["Upper-clothes", "Dress", "Belt", "Face", "Left-arm", "Right-arm"]
+    segment_include = ["Upper-clothes"]
     mask_list = []
     for s in segments:
         if(s['label'] in segment_include):
