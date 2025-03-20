@@ -42,7 +42,7 @@ def pil_to_binary_mask(pil_image, threshold=0):
     return output_mask
 
 
-base_path = 'adharv/checkpoint'
+base_path = 'rapidapi/try-on-diffusion'
 example_path = os.path.join(os.path.dirname(__file__), 'example')
 
 unet = UNet2DConditionModel.from_pretrained(
